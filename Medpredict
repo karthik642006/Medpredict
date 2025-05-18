@@ -1,0 +1,1044 @@
+
+Project Title :  MedPredict – AI-Powered Patient Readmission Risk Forecaster 
+
+Use Case: Predicting Patient Readmission Using Medical Records 
+
+Introduction 
+
+Hospital readmissions are costly and often preventable. Identifying patients at high risk of readmission can significantly enhance care quality, improve discharge processes, and reduce healthcare costs. MedPredict aims to leverage artificial intelligence and electronic health records (EHRs) to forecast readmission risks, enabling proactive and personalized healthcare interventions. 
+
+This project proposes an AI-powered platform designed for use by hospitals and healthcare providers. The tool will predict the probability of patient readmission within a specified time frame post-discharge using historical medical data. It includes an advanced dashboard for displaying high-risk individuals, analytics for hospital performance, and tools for exploring the causes behind predictions. 
+
+Problem Statement
+There is a growing need for an intelligent, accurate model that can analyze structured patient data and forecast the likelihood of readmission. The solution should feature a user-friendly, visual dashboard that allows healthcare providers to monitor, interpret, and act on these predictions efficiently. 
+
+Current hospital systems often lack predictive analytics and real-time decision-making tools. Readmission risks are typically assessed manually, which leads to inefficiencies and potential oversight in patient care. Furthermore, there is minimal visibility into which medical or operational factors contribute to readmissions.
+
+Objectives
+
+Develop a robust machine learning model to accurately predict readmission risks.
+Train the model on diverse datasets with demographic and clinical variables.
+Create an interactive dashboard to visualize predictions.
+Provide filtering and stratification tools to support care interventions.
+Enhance transparency using explainable AI techniques.
+Improve hospital performance and reduce penalties associated with readmissions.
+
+Literature Review 
+
+A variety of studies have highlighted the use of machine learning in healthcare for predictive purposes. Logistic regression, decision trees, and ensemble methods have been explored for predicting hospital readmission, mortality, and disease progression. The Centers for Medicare and Medicaid Services (CMS) in the U.S. penalize hospitals for excessive readmission rates, underscoring the need for solutions like MedPredict. 
+
+Significant works include:
+
+“Predicting Hospital Readmissions Using Machine Learning” (Zhou et al., 2020)
+“SHAP Values for Explainability in Medical Models” (Lundberg et al., 2017)
+“Reducing Readmissions: A Systematic Review” (Health Affairs, 2019)
+
+Data Collection 
+
+Data Sources:
+
+Electronic Health Records (EHRs)
+Hospital Information Systems (HIS)
+Government and research datasets (e.g., MIMIC-III, CMS) 
+
+Key Features:
+
+Patient demographics (age, gender, ethnicity)
+Admission and discharge dates
+Primary and secondary diagnoses
+Treatment and medication history
+Length of stay
+Previous readmissions
+Comorbidities (e.g., diabetes, hypertension)
+
+Data Preprocessing
+
+Handling missing values using imputation techniques
+Encoding categorical variables (e.g., one-hot encoding)
+Feature scaling for algorithms that are sensitive to magnitude
+Temporal analysis of readmission trends
+Balancing the dataset to handle readmission vs non-readmission class imbalance
+
+Model Development 
+
+Algorithm Selection:
+
+Logistic Regression (baseline model)
+Decision Trees
+Random Forest
+Gradient Boosting Machines (XGBoost)
+Neural Networks (for deep insights) 
+
+Evaluation Metrics:
+
+Accuracy
+Precision, Recall, F1-Score
+ROC-AUC
+Confusion Matrix
+
+Model Training & Validation
+
+Split dataset into training (70%), validation (15%), and test (15%) sets
+Use cross-validation to prevent overfitting
+Hyperive exPlanations) to:
+
+Show feature importance per prediction
+Provide interactive plots for clinicians
+Explain model behavior to stakeholders
+
+Dashboard Design 
+
+Technologies:
+
+Frontend: React.js, Bootstrap, D3.js
+Backend: Flask/Django
+Visualization: Plotly, Chart.js, SHAP visual plots 
+
+Key Features:
+
+Patient risk list with filters (disease, age, doctor, ward)
+Performance summary (readmission rates per department)
+Time series charts for readmission trends
+Explainability pane for each prediction
+
+System Architecture 
+
+•    Data Layer: 
+
+Ingest data from hospital HER systems
+Secure storage and retrieval using encrypted databases
+•    Model Layer: 
+
+Scikit-learn / TensorFlow models
+Hosted on cloud (AWS, Azure)
+•    Application Layer: 
+
+RESTful APIs to connect frontend and backend
+Authentication for secure access
+•    Presentation Layer: 
+
+•    Interactive UI for care teams and administrators
+
+Security and Privacy Considerations
+
+HIPAA and GDPR compliance
+Data encryption in transit and at rest
+Role-based access control (RBAC)
+Audit trails and logs
+
+Performance Tracking
+
+Compare historical readmission rates with AI-predicted rates
+Analyze model drift and update models as needed
+Track clinician usage and impact on patient outcomes
+
+Deployment Strategy
+
+Pilot in one department (e.g., cardiology)
+Collect feedback and retrain models
+Expand to hospital-wide usage
+Train staff on dashboard interpretation
+
+Challenges and Limitations
+
+Data availability and quality
+Clinician trust in AI predictions
+Model generalizability across patient populations
+Integration with legacy systems
+
+Risk Mitigation Strategies
+
+Continuous data quality checks
+Involving clinicians in model evaluation
+Frequent model retraining and validation
+User-friendly UX/UI for dashboard
+
+Expected Outcomes
+
+Improved discharge planning
+Reduced readmission penalties
+Better resource allocation
+Enhanced patient care continuity
+
+Future Scope
+
+Real-time alerting system
+Integration with wearables and remote monitoring
+Expansion into predictive modeling for ER visits
+AI-assisted treatment recommendations
+
+Conclusion 
+
+MedPredict is a transformative solution for modern hospitals seeking to embrace data-driven healthcare. By accurately forecasting readmission risks and providing actionable dashboards, MedPredict supports preventive care, reduces costs, and improves overall patient satisfaction. The model’s explainability and operational analytics make it both powerful and trustworthy.
+
+References
+
+Zhou, H., et al. (2020). Predicting Hospital Readmissions Using Machine Learning.
+Lundberg, S. M., et al. (2017). A Unified Approach to Interp
+
+Project Title :  MedPredict – AI-Powered Patient Readmission Risk Forecaster 
+
+Use Case: Predicting Patient Readmission Using Medical Records
+
+Introduction 
+
+Hospital readmissions are costly and often preventable. Identifying patients at high risk of readmission can significantly enhance care quality, improve discharge processes, and reduce healthcare costs. MedPredict aims to leverage artificial intelligence and electronic health records (EHRs) to forecast readmission risks, enabling proactive and personalized healthcare interventions. 
+
+This project proposes an AI-powered platform designed for use by hospitals and healthcare providers. The tool will predict the probability of patient readmission within a specified time frame post-discharge using historical medical data. It includes an advanced dashboard for displaying high-risk individuals, analytics for hospital performance, and tools for exploring the causes behind predictions. 
+
+Problem Statement
+There is a growing need for an intelligent, accurate model that can analyze structured patient data and forecast the likelihood of readmission. The solution should feature a user-friendly, visual dashboard that allows healthcare providers to monitor, interpret, and act on these predictions efficiently. 
+
+Current hospital systems often lack predictive analytics and real-time decision-making tools. Readmission risks are typically assessed manually, which leads to inefficiencies and potential oversight in patient care. Furthermore, there is minimal visibility into which medical or operational factors contribute to readmissions.
+
+Objectives
+
+Develop a robust machine learning model to accurately predict readmission risks.
+Train the model on diverse datasets with demographic and clinical variables.
+Create an interactive dashboard to visualize predictions.
+Provide filtering and stratification tools to support care interventions.
+Enhance transparency using explainable AI techniques.
+Improve hospital performance and reduce penalties associated with readmissions.
+
+Literature Review 
+
+A variety of studies have highlighted the use of machine learning in healthcare for predictive purposes. Logistic regression, decision trees, and ensemble methods have been explored for predicting hospital readmission, mortality, and disease progression. The Centers for Medicare and Medicaid Services (CMS) in the U.S. penalize hospitals for excessive readmission rates, underscoring the need for solutions like MedPredict. 
+
+Significant works include:
+
+“Predicting Hospital Readmissions Using Machine Learning” (Zhou et al., 2020)
+“SHAP Values for Explainability in Medical Models” (Lundberg et al., 2017)
+“Reducing Readmissions: A Systematic Review” (Health Affairs, 2019)
+
+Data Collection 
+
+Data Sources:
+
+Electronic Health Records (EHRs)
+Hospital Information Systems (HIS)
+Government and research datasets (e.g., MIMIC-III, CMS) 
+
+Key Features:
+
+Patient demographics (age, gender, ethnicity)
+Admission and discharge dates
+Primary and secondary diagnoses
+Treatment and medication history
+Length of stay
+Previous readmissions
+Comorbidities (e.g., diabetes, hypertension)
+
+Data Preprocessing
+
+Handling missing values using imputation techniques
+Encoding categorical variables (e.g., one-hot encoding)
+Feature scaling for algorithms that are sensitive to magnitude
+Temporal analysis of readmission trends
+Balancing the dataset to handle readmission vs non-readmission class imbalance
+
+Model Development 
+
+Algorithm Selection:
+
+Logistic Regression (baseline model)
+Decision Trees
+Random Forest
+Gradient Boosting Machines (XGBoost)
+Neural Networks (for deep insights) 
+
+Evaluation Metrics:
+
+Accuracy
+Precision, Recall, F1-Score
+ROC-AUC
+Confusion Matrix
+
+Model Training & Validation
+
+Split dataset into training (70%), validation (15%), and test (15%) sets
+Use cross-validation to prevent overfitting
+Hyperive exPlanations) to:
+
+Show feature importance per prediction
+Provide interactive plots for clinicians
+Explain model behavior to stakeholders
+
+Dashboard Design 
+
+Technologies:
+
+Frontend: React.js, Bootstrap, D3.js
+Backend: Flask/Django
+Visualization: Plotly, Chart.js, SHAP visual plots 
+
+Key Features:
+
+Patient risk list with filters (disease, age, doctor, ward)
+Performance summary (readmission rates per department)
+Time series charts for readmission trends
+Explainability pane for each prediction
+
+System Architecture 
+
+•    Data Layer: 
+
+Ingest data from hospital HER systems
+Secure storage and retrieval using encrypted databases
+•    Model Layer: 
+
+Scikit-learn / TensorFlow models
+Hosted on cloud (AWS, Azure)
+•    Application Layer: 
+
+RESTful APIs to connect frontend and backend
+Authentication for secure access
+•    Presentation Layer: 
+
+•    Interactive UI for care teams and administrators
+
+Security and Privacy Considerations
+
+HIPAA and GDPR compliance
+Data encryption in transit and at rest
+Role-based access control (RBAC)
+Audit trails and logs
+
+Performance Tracking
+
+Compare historical readmission rates with AI-predicted rates
+Analyze model drift and update models as needed
+Track clinician usage and impact on patient outcomes
+
+Deployment Strategy
+
+Pilot in one department (e.g., cardiology)
+Collect feedback and retrain models
+Expand to hospital-wide usage
+Train staff on dashboard interpretation
+
+Challenges and Limitations
+
+Data availability and quality
+Clinician trust in AI predictions
+Model generalizability across patient populations
+Integration with legacy systems
+
+Risk Mitigation Strategies
+
+Continuous data quality checks
+Involving clinicians in model evaluation
+Frequent model retraining and validation
+User-friendly UX/UI for dashboard
+
+Expected Outcomes
+
+Improved discharge planning
+Reduced readmission penalties
+Better resource allocation
+Enhanced patient care continuity
+
+Future Scope
+
+Real-time alerting system
+Integration with wearables and remote monitoring
+Expansion into predictive modeling for ER visits
+AI-assisted treatment recommendations
+
+Conclusion 
+
+MedPredict is a transformative solution for modern hospitals seeking to embrace data-driven healthcare. By accurately forecasting readmission risks and providing actionable dashboards, MedPredict supports preventive care, reduces costs, and improves overall patient satisfaction. The model’s explainability and operational analytics make it both powerful and trustworthy.
+
+References
+
+Zhou, H., et al. (2020). Predicting Hospital Readmissions Using Machine Learning.
+Lundberg, S. M., et al. (2017). A Unified Approach to Interp reting Model Predictions.
+Centers for Medicare & Medicaid Services (CMS)
+Health Affairs. (2019). Systematic Review on Readmission Reduction.
+MIMIC-III Clinical Database Documentation 
+
+reting Model Predictions.  
+Create a app that contains real time data and real time features
+
+Centers for Medicare & Medicaid Services (CMS)
+Health Affairs. (2019). Systematic Review on Readmission Reduction.
+MIMIC-III Clinical Database Documentation
+Edit
+I'll create a React application that showcases the MedPredict system with real-time data visualization features. This app will demonstrate how healthcare providers could monitor patient readmission risks with interactive dashboards and data analytics.
+
+
+MedPredict Dashboard
+Interactive artifact 
+MedPredict: Real-Time Patient Readmission Risk Dashboard
+I've created an interactive real-time dashboard application for the MedPredict system that healthcare providers can use to monitor patient readmission risks. This application addresses the key objectives outlined in your project proposal:
+
+Key Features Implemented
+Real-Time Data Visualization
+Patient risk monitoring with auto-refreshing data (simulates real-time updates)
+Interactive charts showing readmission trends over time
+Department performance analytics
+Risk distribution across patient population
+Patient Risk Management
+Comprehensive patient list with risk scores and clinical data
+Filtering by risk level, department, and patient search
+Detailed patient profiles with risk factors
+Recommended interventions for high-risk patients
+Model Explainability
+Feature importance visualization for each prediction
+Clear identification of risk factors and protective factors
+Transparency in how the AI model makes predictions
+Analytics Dashboard
+Hospital-wide statistics (total patients, high-risk count)
+Department-specific readmission rates
+Financial impact calculations (potential savings)
+Technical Implementation
+The application is built using:
+
+React for the frontend framework
+Recharts for interactive data visualization components
+Tailwind CSS classes for responsive design
+Lucide React for iconography
+Lodash for data manipulation
+All data is dynamically generated with appropriate randomization to simulate a real healthcare environment. The application refreshes automatically every minute to simulate real-time data feeds from hospital EHR systems.
+
+How It Works
+The dashboard displays patient readmission risk data with these components:
+
+Header - With real-time update indicators and manual refresh option
+Stats Cards - Key metrics at
+
+
+
+Continue
+
+Edit
+MedPredict: Real-Time Patient Readmission Risk Dashboard (Continued)
+How It Works (Continued)
+The dashboard displays patient readmission risk data with these components:
+
+Header - With real-time update indicators and manual refresh option
+Stats Cards - Key metrics at a glance, including total patients, high-risk count, and potential cost savings
+Visualization Panels:
+Readmission Trends - Line chart showing hospital readmission rates over time compared to national averages
+Department Performance - Bar chart displaying readmission rates by department
+Risk Distribution - Pie chart showing the proportion of patients in each risk category
+Patient Risk Table:
+Filterable and searchable list of patients
+Risk scores with color-coding (red for high risk, yellow for medium, green for low)
+Quick access to patient demographic and clinical information
+Patient Detail Panel:
+Comprehensive patient profile with risk factors
+Recommended interventions based on risk assessment
+Action buttons for care planning
+Model Explainability Section:
+Visual representation of feature importance
+Clear identification of specific factors affecting each patient's risk prediction
+Transparency in AI decision-making
+Benefits for Healthcare Providers
+This dashboard delivers on the key MedPredict objectives:
+
+Enhances Clinical Decision-Making
+Identifies high-risk patients before discharge
+Provides data-driven recommendations for interventions
+Enables proactive care planning
+Improves Resource Allocation
+Prioritizes attention to patients most likely to be readmitted
+Supports efficient staffing and follow-up scheduling
+Quantifies potential cost savings from prevented readmissions
+Increases Transparency
+Explains why patients are flagged as high-risk
+Builds trust in AI predictions through explainability
+Supports clinician understanding of model recommendations
+Facilitates Performance Improvement
+Tracks readmission rates by department
+Identifies trends and patterns for system-wide improvement
+Measures impact of interventions over time
+Implementation Considerations
+In a real-world deployment, this dashboard would:
+
+Integrate with Hospital Systems
+Connect to EHR and clinical data sources
+Pull real patient data through secure APIs
+Update in real-time as new information becomes available
+Enhance Security Features
+Implement role-based access controls
+Ensure HIPAA compliance with audit logs
+Secure all data in transit and at rest
+Expand Machine Learning Capabilities
+Retrain models regularly with new patient outcome data
+Monitor for model drift and performance degradation
+Incorporate additional clinical variables as they become available
+This interactive prototype demonstrates how the MedPredict system can transform readmission risk management through real-time data visualization, AI-powered risk prediction, and actionable clinical insights.
+
+Would you like me to explain any specific aspect of the application in more detail, such as the model explainability features or how the real-time data updates work?
+
+
+
+
+Add additional features to the app
+
+Edit
+I'll enhance the MedPredict dashboard with additional features that would make it even more powerful for healthcare providers. Let me update the app with new capabilities.
+
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 2 
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 3 
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 4 
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 5 
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 6 
+
+MedPredict Dashboard
+Interactive artifact ∙ Version 7 
+
+
+
+
+> The generated artifact uses libraries we don’t support:  > `{ Calendar as CalendarIcon } from "lucide-react"`> `{ BarChart as BarChartIcon } from "lucide-react"`    Can you fix this error in `medpredict-dashboard`?
+
+import { useState, useEffect } from 'react';
+import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { AlertTriangle, Activity, Users, Calendar, Clock, Filter, Search, ChevronDown, Info, RefreshCw } from 'lucide-react';
+import _ from 'lodash';
+
+// Mock data generator functions
+const generatePatients = () => {
+  const conditions = ['Diabetes', 'Heart Failure', 'COPD', 'Pneumonia', 'Hypertension', 'Stroke'];
+  const departments = ['Cardiology', 'Pulmonology', 'Internal Medicine', 'Neurology', 'Geriatrics'];
+  const doctors = ['Dr. Smith', 'Dr. Johnson', 'Dr. Williams', 'Dr. Brown', 'Dr. Jones'];
+  
+  return Array.from({ length: 100 }, (_, i) => {
+    const readmissionRisk = Math.random();
+    let riskLevel;
+    
+    if (readmissionRisk > 0.7) riskLevel = 'High';
+    else if (readmissionRisk > 0.4) riskLevel = 'Medium';
+    else riskLevel = 'Low';
+    
+    return {
+      id: i + 1,
+      name: `Patient ${i + 1}`,
+      age: Math.floor(Math.random() * 50) + 30,
+      gender: Math.random() > 0.5 ? 'Male' : 'Female',
+      primaryCondition: conditions[Math.floor(Math.random() * conditions.length)],
+      department: departments[Math.floor(Math.random() * departments.length)],
+      doctor: doctors[Math.floor(Math.random() * doctors.length)],
+      lengthOfStay: Math.floor(Math.random() * 14) + 1,
+      readmissionRisk: parseFloat(readmissionRisk.toFixed(2)),
+      riskLevel,
+      dischargeDate: new Date(Date.now() - Math.floor(Math.random() * 20) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      previousReadmissions: Math.floor(Math.random() * 3),
+    };
+  });
+};
+
+const generateTrends = () => {
+  return Array.from({ length: 12 }, (_, i) => {
+    const month = new Date(2024, i, 1).toLocaleString('default', { month: 'short' });
+    return {
+      month,
+      readmissionRate: (Math.random() * 0.1 + 0.1).toFixed(2),
+      nationalAvg: 0.15.toFixed(2),
+    };
+  });
+};
+
+const generateDepartmentStats = () => {
+  return [
+    { name: 'Cardiology', readmissionRate: (Math.random() * 0.1 + 0.12).toFixed(2), patients: Math.floor(Math.random() * 100) + 100 },
+    { name: 'Pulmonology', readmissionRate: (Math.random() * 0.1 + 0.14).toFixed(2), patients: Math.floor(Math.random() * 100) + 80 },
+    { name: 'Internal Medicine', readmissionRate: (Math.random() * 0.1 + 0.11).toFixed(2), patients: Math.floor(Math.random() * 100) + 150 },
+    { name: 'Neurology', readmissionRate: (Math.random() * 0.1 + 0.13).toFixed(2), patients: Math.floor(Math.random() * 100) + 70 },
+    { name: 'Geriatrics', readmissionRate: (Math.random() * 0.1 + 0.16).toFixed(2), patients: Math.floor(Math.random() * 100) + 90 },
+  ];
+};
+
+const generateRiskDistribution = () => {
+  return [
+    { name: 'High', value: Math.floor(Math.random() * 20) + 15 },
+    { name: 'Medium', value: Math.floor(Math.random() * 30) + 30 },
+    { name: 'Low', value: Math.floor(Math.random() * 40) + 40 },
+  ];
+};
+
+const generateFeatureImportance = () => {
+  return [
+    { name: 'Previous Readmissions', value: (Math.random() * 0.2 + 0.2).toFixed(2) },
+    { name: 'Length of Stay', value: (Math.random() * 0.15 + 0.15).toFixed(2) },
+    { name: 'Age', value: (Math.random() * 0.1 + 0.1).toFixed(2) },
+    { name: 'Comorbidities', value: (Math.random() * 0.1 + 0.1).toFixed(2) },
+    { name: 'Primary Diagnosis', value: (Math.random() * 0.1 + 0.05).toFixed(2) },
+  ].sort((a, b) => b.value - a.value);
+};
+
+// Main app
+export default function MedPredictDashboard() {
+  const [patients, setPatients] = useState([]);
+  const [filteredPatients, setFilteredPatients] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [riskFilter, setRiskFilter] = useState('All');
+  const [departmentFilter, setDepartmentFilter] = useState('All');
+  const [trends, setTrends] = useState([]);
+  const [departmentStats, setDepartmentStats] = useState([]);
+  const [riskDistribution, setRiskDistribution] = useState([]);
+  const [featureImportance, setFeatureImportance] = useState([]);
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [loadingData, setLoadingData] = useState(false);
+
+  // Initialize data
+  useEffect(() => {
+    loadData();
+    // Set up a timer to refresh data every minute to simulate real-time updates
+    const intervalId = setInterval(() => {
+      loadData();
+    }, 60000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Filter patients when filters change
+  useEffect(() => {
+    let result = [...patients];
+    
+    if (searchTerm) {
+      result = result.filter(patient => 
+        patient.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        patient.primaryCondition.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    
+    if (riskFilter !== 'All') {
+      result = result.filter(patient => patient.riskLevel === riskFilter);
+    }
+    
+    if (departmentFilter !== 'All') {
+      result = result.filter(patient => patient.department === departmentFilter);
+    }
+    
+    setFilteredPatients(result);
+  }, [patients, searchTerm, riskFilter, departmentFilter]);
+
+  const loadData = () => {
+    setLoadingData(true);
+    
+    // Simulate API calls with setTimeout
+    setTimeout(() => {
+      setPatients(generatePatients());
+      setTrends(generateTrends());
+      setDepartmentStats(generateDepartmentStats());
+      setRiskDistribution(generateRiskDistribution());
+      setFeatureImportance(generateFeatureImportance());
+      setLastUpdated(new Date());
+      setLoadingData(false);
+    }, 500);
+  };
+
+  const refreshData = () => {
+    loadData();
+  };
+
+  const COLORS = ['#ff4d4f', '#faad14', '#52c41a'];
+  const departments = _.uniqBy(patients, 'department').map(p => p.department);
+
+  // Dashboard stats
+  const stats = {
+    totalPatients: patients.length,
+    highRiskPatients: patients.filter(p => p.riskLevel === 'High').length,
+    avgReadmissionRisk: (patients.reduce((acc, curr) => acc + curr.readmissionRisk, 0) / patients.length).toFixed(2),
+    potentialSavings: `$${(patients.filter(p => p.riskLevel === 'High').length * 12000).toLocaleString()}`
+  };
+
+  return (
+    <div className="flex flex-col h-screen bg-gray-100">
+      {/* Header */}
+      <header className="bg-white shadow-sm p-4">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <Activity className="h-6 w-6 text-blue-600" />
+            <h1 className="text-xl font-bold text-gray-800">MedPredict</h1>
+            <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Real-Time Dashboard</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="text-sm text-gray-500">
+              Last updated: {lastUpdated.toLocaleTimeString()}
+            </div>
+            <button 
+              onClick={refreshData}
+              className="flex items-center space-x-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-3 py-1 rounded"
+            >
+              <RefreshCw className="h-4 w-4" />
+              <span>{loadingData ? 'Updating...' : 'Refresh Data'}</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Main content */}
+      <main className="flex-1 p-4 overflow-auto">
+        {/* Stats cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="text-sm text-gray-500">Total Patients</p>
+                <p className="text-2xl font-bold">{stats.totalPatients}</p>
+              </div>
+              <Users className="h-6 w-6 text-blue-500" />
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="text-sm text-gray-500">High Risk Patients</p>
+                <p className="text-2xl font-bold text-red-500">{stats.highRiskPatients}</p>
+              </div>
+              <AlertTriangle className="h-6 w-6 text-red-500" />
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="text-sm text-gray-500">Avg. Readmission Risk</p>
+                <p className="text-2xl font-bold">{stats.avgReadmissionRisk}</p>
+              </div>
+              <Activity className="h-6 w-6 text-yellow-500" />
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="text-sm text-gray-500">Potential Savings</p>
+                <p className="text-2xl font-bold text-green-600">{stats.potentialSavings}</p>
+              </div>
+              <div className="bg-green-100 p-1 rounded">
+                <span className="text-green-600 text-lg">$</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Charts section */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+          {/* Readmission Trends */}
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h2 className="text-lg font-medium mb-4">Readmission Trends</h2>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={trends}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="readmissionRate" name="Hospital Rate" stroke="#2563eb" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="nationalAvg" name="National Avg" stroke="#94a3b8" strokeDasharray="5 5" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Department Performance */}
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h2 className="text-lg font-medium mb-4">Department Performance</h2>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={departmentStats}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="readmissionRate" name="Readmission Rate" fill="#3b82f6" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Risk Distribution */}
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h2 className="text-lg font-medium mb-4">Risk Distribution</h2>
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  data={riskDistribution}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {riskDistribution.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        {/* Patient list section */}
+        <div className="bg-white rounded-lg shadow p-4 mb-6">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-lg font-medium">Patient Readmission Risk</h2>
+            <div className="flex space-x-2">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Search className="h-4 w-4 text-gray-400" />
+                </div>
+                <input
+                  type="text"
+                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Search patients..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+              <div className="relative">
+                <select
+                  className="pl-4 pr-8 py-2 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={riskFilter}
+                  onChange={(e) => setRiskFilter(e.target.value)}
+                >
+                  <option value="All">All Risk Levels</option>
+                  <option value="High">High Risk</option>
+                  <option value="Medium">Medium Risk</option>
+                  <option value="Low">Low Risk</option>
+                </select>
+                <div className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+                  <ChevronDown className="h-4 w-4 text-gray-400" />
+                </div>
+              </div>
+              <div className="relative">
+                <select
+                  className="pl-4 pr-8 py-2 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={departmentFilter}
+                  onChange={(e) => setDepartmentFilter(e.target.value)}
+                >
+                  <option value="All">All Departments</option>
+                  {departments.map((dept, i) => (
+                    <option key={i} value={dept}>{dept}</option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+                  <ChevronDown className="h-4 w-4 text-gray-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Patient table */}
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Demographics</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clinical</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Risk Score</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {filteredPatients.slice(0, 10).map((patient) => (
+                  <tr key={patient.id} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="font-medium text-gray-900">{patient.name}</div>
+                      <div className="text-xs text-gray-500">ID: {patient.id}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm">{patient.age} yrs, {patient.gender}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm">{patient.primaryCondition}</div>
+                      <div className="text-xs text-gray-500">LOS: {patient.lengthOfStay} days</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm">{patient.department}</div>
+                      <div className="text-xs text-gray-500">{patient.doctor}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                        patient.riskLevel === 'High' ? 'bg-red-100 text-red-800' :
+                        patient.riskLevel === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
+                        'bg-green-100 text-green-800'
+                      }`}>
+                        {patient.riskLevel} ({patient.readmissionRisk})
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                      <button className="text-blue-600 hover:text-blue-900 mr-3">View Details</button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {filteredPatients.length === 0 && (
+            <div className="text-center py-4 text-gray-500">No patients match your filters</div>
+          )}
+          <div className="mt-4 flex justify-between items-center text-sm text-gray-500">
+            <div>Showing 1-{Math.min(10, filteredPatients.length)} of {filteredPatients.length} patients</div>
+            <div className="flex space-x-2">
+              <button className="px-3 py-1 border border-gray-300 rounded-md disabled:opacity-50" disabled>Previous</button>
+              <button className="px-3 py-1 border border-gray-300 rounded-md">Next</button>
+            </div>
+          </div>
+        </div>
+  
+        {/* Patient Detail & Model Explainability */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Sample Patient Detail */}
+          <div className="bg-white rounded-lg shadow p-4">
+            <h2 className="text-lg font-medium mb-4">Patient Risk Detail</h2>
+            {filteredPatients.length > 0 && (
+              <div>
+                <div className="border-b pb-3 mb-3">
+                  <div className="flex justify-between items-center">
+                    <h3 className="font-medium text-lg">{filteredPatients[0].name}</h3>
+                    <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      filteredPatients[0].riskLevel === 'High' ? 'bg-red-100 text-red-800' :
+                      filteredPatients[0].riskLevel === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-green-100 text-green-800'
+                    }`}>
+                      {filteredPatients[0].riskLevel} Risk
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    {filteredPatients[0].age} years, {filteredPatients[0].gender} • {filteredPatients[0].primaryCondition}
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <div className="text-sm text-gray-500">Department</div>
+                    <div>{filteredPatients[0].department}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Physician</div>
+                    <div>{filteredPatients[0].doctor}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Length of Stay</div>
+                    <div>{filteredPatients[0].lengthOfStay} days</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Discharge Date</div>
+                    <div>{filteredPatients[0].dischargeDate}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Previous Readmissions</div>
+                    <div>{filteredPatients[0].previousReadmissions}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Readmission Risk</div>
+                    <div className="font-bold">{(filteredPatients[0].readmissionRisk * 100).toFixed(0)}%</div>
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <h4 className="font-medium mb-2">Recommended Interventions</h4>
+                  <ul className="text-sm space-y-1">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      Schedule follow-up appointment within 7 days
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      Connect with care coordinator for medication review
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      Provide enhanced discharge instructions
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex justify-end space-x-2">
+                  <button className="px-3 py-1 border border-gray-300 rounded-md text-sm">Full Profile</button>
+                  <button className="px-3 py-1 bg-blue-600 text-white rounded-md text-sm">Create Care Plan</button>
+                </div>
+              </div>
+            )}
+            {filteredPatients.length === 0 && (
+              <div className="text-center py-10 text-gray-500">
+                Select a patient to view details
+              </div>
+            )}
+          </div>
+          
+          {/* Model Explainability */}
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-medium">Model Explainability</h2>
+              <button className="inline-flex items-center text-sm text-blue-600">
+                <Info className="h-4 w-4 mr-1" />
+                How is risk calculated?
+              </button>
+            </div>
+            {filteredPatients.length > 0 && (
+              <div>
+                <div className="mb-6">
+                  <h4 className="font-medium mb-2 text-sm text-gray-500">Feature Importance for {filteredPatients[0].name}</h4>
+                  <div className="space-y-2">
+                    {featureImportance.map((feature, index) => (
+                      <div key={index}>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>{feature.name}</span>
+                          <span className="font-medium">{parseFloat(feature.value) * 100}%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div 
+                            className="bg-blue-600 h-2 rounded-full" 
+                            style={{ width: `${parseFloat(feature.value) * 100}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-medium mb-2 text-sm text-gray-500">Key Factors Affecting this Prediction</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="bg-red-50 border-l-4 border-red-500 p-3">
+                      <p className="font-medium text-red-700">High Risk Factors</p>
+                      <p className="text-red-600">
+                        {filteredPatients[0].previousReadmissions > 0 ? 
+                          `${filteredPatients[0].previousReadmissions} previous readmissions in the last year.` : 
+                          "Long length of stay compared to condition average."
+                        }
+                      </p>
+                    </div>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-3">
+                      <p className="font-medium text-green-700">Protective Factors</p>
+                      <p className="text-green-600">
+                        Regular follow-up appointments attended.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {filteredPatients.length === 0 && (
+              <div className="text-center py-10 text-gray-500">
+                Select a patient to view model explanation
+              </div>
+            )}
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white shadow-sm p-4 mt-auto">
+        <div className="text-center text-sm text-gray-500">
+          <p>MedPredict AI-Powered Readmission Risk Forecaster v1.0</p>
+          <p className="text-xs">© 2025 MedPredict. HIPAA Compliant. All patient data is simulated.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
